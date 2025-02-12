@@ -50,6 +50,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
         }
 
+	function resultsPercents() {
+		allergy_percent = (allergy_count/4) * 100;
+		cold_percentage = (cold_count/4) *100;
+
   </script>
 
 
@@ -133,19 +137,29 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	<div id="content" class="w3-container">
 		<p>Are your symptoms seasonal or chronic?</p>
-			<a href="#Results" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
-			<a href="#Results" onclick="coldAdd();" class="w3-btn w3-black">No</a>
+			<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
+			<a href="#five" onclick="coldAdd();" class="w3-btn w3-black">No</a>
 	</div><!-- Code for question 4, if users answered yes, allergy count increases and if they answered no, cold count increases -->
 </div>
 
-<footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>DIY!</p>
-</footer>
+<div class="page" id="five">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Last Page</h1>
+	</div>
+
+	<div id="content" class="w3-container">
+		<p>Click below for results!</p>
+			<a href="#Results" onclick="resultsPercents();" class="w3-btn w3-black">results</a>
+	</div><!--code to run percent function -->
+</div>
 
 <p id="Results">
+	<footer class="w3-bottom w3-container w3-flat-carrot">
+		<p>DIY!</p>
+	</footer>
 	<script>
-	var resultText = document.getElementById("Results");
-	resultText.innerHTML = "Probability it is allergies =" + allergy_count + "<br> Probability it is a cold =" + cold_count; 
+	var resultText = document.getElementById("resultsPercents()");
+	resultText.innerHTML = "Probability it is allergies =" + allergy_percent + "<br> Probability it is a cold =" + cold_percentage; 
 	</script>
 </body>
 </html>
