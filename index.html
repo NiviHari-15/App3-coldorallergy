@@ -96,8 +96,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Put Question 1 content here.</p>    
-    	</div>
+        <p>Are your eyes watery or itchy?</p>    
+		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>	
+		<a href="#two" onclick="coldAdd();" class="w3-btn w3-black">No</a>	
+    	</div>!-- For question 1, if users answered yes, their allergy count will increase by one by calling the allergyAdd function and if users answered no, their cold count will increase by one by calling the coldAdd function -->
 </div>
 
 <div class="page" id="two">
@@ -106,13 +108,41 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Content of page 2 goes here.</p>
-	</div>
+		<p>Do you have a fever?</p>
+			<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+			<a href="#three" onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
+	</div>!-- Code for question 2, basically if the user answered no, allergy count will increase by calling the allergyAdd function and if they answered yes, the cold count will increase -->
 </div>	
+
+<div class="page" id="three">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 3</h1>
+	</div>
+
+	<div id="content" class="w3-container">
+		<p>Do you have a sore throat?</p>
+			<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+			<a href="#four" onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
+	</div>!-- Code for question 3, if user answered no, their allergy count will increase and if they answered yes, their cold count will increase -->
+</div>
+
+<div class="page" id="four">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 4</h1>
+	</div>
+
+	<div id="content" class="w3-container">
+		<p>Are your symptoms seasonal or chronic?</p>
+			<a href="#Results" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
+			<a href="#Results" onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	</div>!-- Code for question 4, if users answered yes, allergy count increases and if they answered no, cold count increases -->
+</div>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
 
+<p id="Results">
+	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 
 </body>
 </html>
