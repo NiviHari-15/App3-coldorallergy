@@ -113,13 +113,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
-<div class="page" id="one"> // creates new page
+<div class="page" id="one"> <!--creates new page-->
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1> <!-- header on question 1 page -->
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Are your eyes watery or itchy?</p>    // creating the first question
+        <p>Are your eyes watery or itchy?</p>    <!-- creating the first question-->
 		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>	<!--calls allergyAdd if yes and made button yes, also takes them to page two-->
 		<a href="#two" onclick="coldAdd();" class="w3-btn w3-black">No</a>	<!-- calls coldAdd if no and made button no, also takes them to page two-->
     	</div><!-- For question 1, if users answered yes, their allergy count will increase by one by calling the allergyAdd function and if users answered no, their cold count will increase by one by calling the coldAdd function -->
