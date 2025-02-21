@@ -40,10 +40,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         var allergy_count = 0;
         var cold_count = 0;
 	// the variables used to store the count of answers that correspond to a cold or allergy
-	var allergy_percent;
-	var cold_percent;
-	// the variables used to store the percent of answers that correspond to a cold or allergies
-	
 
 
         function allergyAdd(){
@@ -58,13 +54,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         }
 
 	function resultsPercents() {
+		var allergy_percent;
+		var cold_percent;
+		// the variables used to store the percent of answers that correspond to a cold or allergies
 		allergy_percent = (allergy_count/4) * 100; 
 		// divides by 4 to get decimal and multiplies by 100 to get percent
 		cold_percent = (cold_count/4) *100;
 		// divides by 4 to get decimal and multiplies by 100 to get percent
 		var resultText = document.getElementById("results");
 		// captures content from the results page
-		resultText.innerHTML = "Probability it is allergies =" + allergy_percent + "%" + "<br>Probability it is a cold =" + cold_percent + "%";
+		resultText.innerHTML = "Probability it is allergies =" + allergy_percent + "%" + 
+			"<br>Probability it is a cold =" + cold_percent + "%";
 		// displays output so allergy percent and cold percent and also uses concatenation to add percent symbols and other words besides the variables
 		// the <br> makes a line break
 		// this function basically calculates the percent of answers that favored a cold and the percent that favored allergies
